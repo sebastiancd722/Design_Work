@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-pt-24">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova | Portfolio</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+              fashion: ['Bodoni Moda', 'serif'],
+              modern: ['Inter', 'sans-serif'],
+              classic: ['Georgia', 'serif'],
+              grunge: ['Permanent Marker', 'cursive'],
+              tech: ['Share Tech Mono', 'monospace'],
+              impact: ['Teko', 'sans-serif'],
+              montserrat: ['Montserrat', 'sans-serif'],
+              script: ['Great Vibes', 'cursive'],
+              anton: ['Anton', 'sans-serif'],
+              condensed: ['Roboto Condensed', 'sans-serif'],
+              playfair: ['Playfair Display', 'serif'],
+              stats: ['VT323', 'monospace'],
+              jetbrains: ['JetBrains Mono', 'monospace'],
+              oswald: ['Oswald', 'sans-serif'],
+              russo: ['Russo One', 'sans-serif'],
+              rounded: ['M PLUS Rounded 1c', 'sans-serif'],
+              archivo: ['Archivo', 'sans-serif'],
+            },
+            animation: {
+              'glow-pulse': 'glow-pulse 3s infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'sheen': 'sheen 3s infinite linear',
+              'gloss': 'gloss 5s infinite cubic-bezier(0.4, 0, 0.2, 1)',
+              'equalize': 'equalize 1s infinite ease-in-out',
+              'ambient-shift': 'ambient 15s ease infinite',
+              'fog': 'fog 60s linear infinite',
+              'glitch': 'glitch-anim 5s infinite linear alternate-reverse',
+              'glitch2': 'glitch-anim2 5s infinite linear alternate-reverse',
+              'spin-slow': 'spin 12s linear infinite',
+              'drift': 'subtle-drift 10s infinite ease-in-out',
+            },
+            keyframes: {
+              'glow-pulse': {
+                '0%, 100%': { opacity: '0.4', filter: 'blur(100px)' },
+                '50%': { opacity: '0.7', filter: 'blur(80px)' },
+              },
+              'float': {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              'sheen': {
+                '0%': { 'background-position': '200% 0' },
+                '100%': { 'background-position': '-200% 0' },
+              },
+              'gloss': {
+                '0%': { 'background-position': '250% 0' },
+                '100%': { 'background-position': '-150% 0' },
+              },
+              'equalize': {
+                '0%, 100%': { height: '4px' },
+                '50%': { height: '16px' },
+              },
+              'ambient': {
+                '0%': { 'background-position': '0% 50%' },
+                '50%': { 'background-position': '100% 50%' },
+                '100%': { 'background-position': '0% 50%' },
+              },
+              'fog': {
+                '0%': { transform: 'translate3d(0, 0, 0)' },
+                '100%': { transform: 'translate3d(-200vw, 0, 0)' },
+              },
+              'spin': {
+                'from': { transform: 'rotate(0deg)' },
+                'to': { transform: 'rotate(360deg)' }
+              },
+              'glitch-anim': {
+                '0%': { clip: 'rect(10px, 9999px, 30px, 0)' },
+                '20%': { clip: 'rect(60px, 9999px, 80px, 0)' },
+                '40%': { clip: 'rect(20px, 9999px, 90px, 0)' },
+                '60%': { clip: 'rect(80px, 9999px, 10px, 0)' },
+                '80%': { clip: 'rect(50px, 9999px, 30px, 0)' },
+                '100%': { clip: 'rect(70px, 9999px, 20px, 0)' },
+              },
+              'glitch-anim2': {
+                '0%': { clip: 'rect(30px, 9999px, 10px, 0)' },
+                '20%': { clip: 'rect(80px, 9999px, 60px, 0)' },
+                '40%': { clip: 'rect(90px, 9999px, 20px, 0)' },
+                '60%': { clip: 'rect(10px, 9999px, 80px, 0)' },
+                '80%': { clip: 'rect(30px, 9999px, 50px, 0)' },
+                '100%': { clip: 'rect(20px, 9999px, 70px, 0)' },
+              },
+              'subtle-drift': {
+                '0%': { transform: 'scale(1.05)' },
+                '50%': { transform: 'scale(1.1)' },
+                '100%': { transform: 'scale(1.05)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <script>
+      (function() {
+        try {
+          const localTheme = localStorage.getItem('theme');
+          const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (localTheme === 'dark' || (!localTheme && supportDarkMode)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Critical Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Decorative Fonts (Lazy Loaded) -->
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Permanent+Marker&family=Share+Tech+Mono&family=Teko:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,700;0,900;1,900&family=Great+Vibes&family=Anton&family=Roboto+Condensed:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=VT323&family=JetBrains+Mono:wght@400;700;800&family=Oswald:wght@700&family=Russo+One&family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Archivo:wght@300;400;500;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Permanent+Marker&family=Share+Tech+Mono&family=Teko:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,700;0,900;1,900&family=Great+Vibes&family=Anton&family=Roboto+Condensed:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=VT323&family=JetBrains+Mono:wght@400;700;800&family=Oswald:wght@700&family=Russo+One&family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Archivo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    </noscript>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.36.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<!-- Use relative paths so the site works under GitHub Pages subpaths (/<repo>/). -->
+<link rel="stylesheet" href="./index.css">
+</head>
+<body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 selection:bg-blue-100 dark:selection:bg-blue-900">
+    <div id="root"></div>
+<script type="module" src="./index.tsx"></script>
+</body>
+</html>
